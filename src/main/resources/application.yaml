@@ -1,0 +1,16 @@
+# spring.application.name=madang properties 에서의 코드
+#yml = yaml
+spring:
+  application:
+    name: madang
+# yml(yaml)에서는 무조건 : 이후 띄어쓰기 필수
+# : properties 에서 . 과 같은 역할
+  datasource:
+    url: jdbc:mariadb://localhost/madangdb
+    username: root
+    password: green502
+
+#주소 값이 중복된 코드를 줄여줌
+
+mybatis:
+  mapper-locations: mappers/*.xml
