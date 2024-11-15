@@ -42,7 +42,7 @@ public class BookController {
         return new MyResponse<>("수정 완료",re);
     }
     @DeleteMapping
-    MyResponse<Integer> delBook(BookDelReq p){
+    MyResponse<Integer> delBook(@ParameterObject BookDelReq p){
         int re = service.delBook(p);
         return new MyResponse<>("삭제 완료",re);
     }
