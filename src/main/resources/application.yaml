@@ -15,9 +15,13 @@ spring:
 mybatis:
   mapper-locations: mappers/**/*.xml
 springdoc:
-  api-docs:
-    version: openapi_3_1
+#  api-docs:
+#    version: openapi_3_1 없어도 무관
   swagger-ui:
-    default-model-expand-depth: 10
+    default-model-expand-depth: 2
     default-models-expand-depth: -1
+    operations-sorter: method
     path: /swagger
+# model expand depth 는 2면 충분
+
+#yaml 에선 탭으로 내부의 항목임을 표현함으로 줄맞추기를 잘 해줘야 된다.
