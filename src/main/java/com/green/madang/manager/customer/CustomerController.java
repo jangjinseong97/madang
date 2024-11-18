@@ -43,6 +43,6 @@ public class CustomerController {
     MyResponse<Integer> delCustomer(@ParameterObject CustomerDelReq p){
         return new MyResponse<>("삭제 완료", service.delCustomer(p));
     }
-    // @ModelAttribute 생략 된거지만 이때 파라미터에 int 와 같은 기본타입이들어 갔다면
-    // @RequestParam 이 들어갔어야 됬다.?
+    // @ModelAttribute 생략 된거지만
+    // 파라미터에 하나의 값만 사용되면 @RequestParam 사용 ( 예시로 id(pk) 하나만 전달받아 처리할 때)
 }
