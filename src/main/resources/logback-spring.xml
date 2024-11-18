@@ -28,7 +28,7 @@
 
     <!-- TRACE > DEBUG > INFO > WARN > ERROR 5종류의 레벨
     여기서 root level = "" 안에 적는 것 포함 아래의 로그들을 파일로 만들어지고 콘솔에 출력
-    예시로 INFO 입력시 INFO WARN ERROR 로그만 파일로 만들어지고 콘솔에 찍힘-->
+    예시로 INFO 입력시 INFO WARN ERROR 로그만 파일로 만들어지고 콘솔에 찍힘,-->
 
     <root level="INFO">
         <appender-ref ref="FILE" />
