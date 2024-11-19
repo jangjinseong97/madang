@@ -1,4 +1,4 @@
-package com.green.madang.manager.book.common.model;
+package com.green.madang.common.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

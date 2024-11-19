@@ -1,7 +1,7 @@
 package com.green.madang.manager.book;
 
 
-import com.green.madang.manager.book.common.model.MyResponse;
+import com.green.madang.common.model.MyResponse;
 import com.green.madang.manager.book.model.*;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;

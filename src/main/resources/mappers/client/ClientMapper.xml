@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.green.madang.client.ClientMapper">
+    <insert id="insdOrders">
+        INSERT INTO orders
+        (custid, bookid, saleprice, orderdate)
+        SELECT #{custId}, bookid, price, current_date
+        FROM book
+        WHERE bookid = #{bookId};
+    </insert>
+    <select id="selOrders">
+        SELECT a.bookid AS bookId, a.price, a.bookname AS bookName, a.publisher
+        FROM book A
+        JOIN orders B
+        ON a.bookid = b.bookid
+        WHERE b.custid = #{custId}
+        ORDER BY orderid DESC
+        LIMIT #{sIdx} ,#{size}
+    </select>
+    <select id="selPageOrders">
+        SELECT a.orderId, a.custId, c.name, a.bookId , b.bookName, a.salePrice, a.orderDate
+        FROM orders A
+        JOIN book B
+        ON a.bookid = b.bookid
+        JOIN customer C
+        ON a.custid = c.custid
+        ORDER BY a.orderid DESC
+        LIMIT #{sIdx} , #{size}
+    </select>
+</mapper>
