@@ -14,6 +14,9 @@ public class ClientService {
     private final ClientMapper mapper;
 
     int insdOrders(OrderPostReq p){
+        p.getOrderId();
+        int r = mapper.insdOrders(p);
+        p.getOrderId();
         return mapper.insdOrders(p);
     }
     List<OrderGetRes> selOrders(OrderGetReq p){
